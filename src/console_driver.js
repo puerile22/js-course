@@ -15,6 +15,21 @@ var displayBoard = function () {
   console.log("  | " + column.join("   "));
   console.log("-----------------------------------");
   for (var i = 0; i < board.length; i++) {
+    var k = numToChar[i]; 
     console.log(numToChar[i] + " |" + board[i].join(" "));
+    for (var j = 0; j < board.length; j++) {
+      if (board[i][j] === 'wht') {
+        $('.col-'+j+'','.row-'+k+'').children().attr('class','piece wht');
+      } else if (board[i][j] === 'red') {
+        $('.col-'+j+'','.row-'+k+'').children().attr('class','piece red');
+      } else if (board[i][j] === ' X ') {
+        $('.col-'+j+'','.row-'+k+'').children().attr('class','piece');
+      } else if (board[i][j] === 'wht-king') {
+        $('.col-'+j+'','.row-'+k+'').children().attr('class','piece wht-king');
+      } else if (board[i][j] === 'red-king') {
+        $('.col-'+j+'','.row-'+k+'').children().attr('class','piece red-king');
+      }
+    } 
   }
 };
+

@@ -18,7 +18,7 @@
   background-color: red;
 }
 
-.white {
+.wht {
   background-color: white;
 }
 
@@ -28,4 +28,14 @@
   height: 40px;
   display: inline-block;
   border-radius: 50%;
+}
+
+.wht-king {
+  background-image: url(http://www.spraytanqueen.com.au/wp-content/uploads/Spray-Tan-Queen-Logo-Crown-Black.png);
+  background-size:cover;
+}
+
+.red-king {
+  background-image: url(http://thumbs.dreamstime.com/t/illustration-crown-red-background-36585325.jpg);
+  background-size: cover;
 }
