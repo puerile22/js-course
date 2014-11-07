@@ -51,7 +51,10 @@ var getMove = function() {
     endRow: (end.split(",")[0]).charCodeAt()-97,
     endCol: parseInt(end.split(",")[1])
   };
-  if (input.startRow>=0 && input.startRow<=7 && input.startCol>=0 && input.startCol<=7 && input.endCol>=0 && input.endCol<=7 && input.endRow>=0 && input.endRow<=7) {
+  if (input.startRow>=0 && input.startRow<=7 &&
+      input.startCol>=0 && input.startCol<=7 && 
+      input.endCol>=0 && input.endCol<=7 && 
+      input.endRow>=0 && input.endRow<=7) {
     return input;
   } else {
     $(document).trigger('invalidMove');
@@ -638,10 +641,10 @@ var gameover = function() {
       whtKing++;
     }
   }
-  if (countRed === 8) {
+  if (countRed === 8  && redKing === 8) {
     alert('White you win!');
     $(document).trigger('gameover');
-  } else if (countWht === 8) {
+  } else if (countWht === 8 && whtKing === 8) {
     alert('Red you win!');
     $(document).trigger('gameover');
   } else if ((countRed === 7 && redKing === 1) && (countWht === 7 && whtKing ===1)) {
